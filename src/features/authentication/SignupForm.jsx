@@ -16,7 +16,7 @@ console.log(signup);
 
   function onsubmit({fullName, email, password}) {
     signup({ fullName, email, password }, {
-      onSettled: reset
+      onSettled:() =>reset()
     });
   }
   return (
