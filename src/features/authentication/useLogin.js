@@ -11,8 +11,7 @@ export function useLogin() {
     mutationFn: ({ email, password }) => loginApi({ email, password }),
     onSuccess: (user) => {
       console.log("user",user.user);
-      
-      queryClient.setQueryData(["user"],user.user);
+      queryClient.setQueryData("user",user.user);
       navigate("/dashboard",{replace:true});
     },
     onError: (err) => toast.error(err.message),

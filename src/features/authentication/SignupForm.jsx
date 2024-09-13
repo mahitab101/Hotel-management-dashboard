@@ -6,8 +6,6 @@ import Input from "../../ui/Input";
 import SpinnerMini from "../../ui/SpinnerMini";
 import {useSignup} from './useSignup'
 
-// Email regex: /\S+@\S+\.\S+/
-
 function SignupForm() {
   const {isLoading,signup} = useSignup();
 console.log(signup);
